@@ -1,0 +1,4 @@
+services:
+#    craigslist_main.example:
+#        class: Craigslist\MainBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
