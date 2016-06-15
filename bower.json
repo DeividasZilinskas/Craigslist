@@ -1,0 +1,22 @@
+{
+  "name": "craigslist",
+  "description": "Create a small web application that displays advertisements posted by users on its home page. It should somewhat resemble websites such as craigslist.org or skelbiu.lt, but have much less features.",
+  "main": "index.js",
+  "authors": [
+    "DeividasZilinskas <zilinskas.de@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/DeividasZilinskas/Craigslist",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "bootstrap-sass": "^3.3.6"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "craigslist",
+  "version": "1.0.0",
+  "description": "Create a small web application that displays advertisements posted by users on its home page. It should somewhat resemble websites such as craigslist.org or skelbiu.lt, but have much less features.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeividasZilinskas/Craigslist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeividasZilinskas/Craigslist/issues"
+  },
+  "homepage": "https://github.com/DeividasZilinskas/Craigslist#readme",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.3.1",
+    "gulp-uglify": "^1.5.3"
+  }
+}
