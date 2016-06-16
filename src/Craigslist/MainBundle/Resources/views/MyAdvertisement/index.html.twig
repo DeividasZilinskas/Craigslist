@@ -1,0 +1,10 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Craigslist - view your advertisement!{% endblock %}
+
+{% block content %}
+{{ parent() }}
+    {% include '::inc/pageHeader.html.twig' with {'title': 'Craigslist', 'description': 'Your advertisements',
+    'totalArtciles': myAds|length} %}
+    {% include '::inc/adsList.html.twig' with {'ads': myAds, 'myList': 1 } %}
+{% endblock %}

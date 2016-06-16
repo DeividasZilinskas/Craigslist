@@ -1,7 +1,18 @@
-craigslist_main:
-    resource: "@CraigslistMainBundle/Controller/"
-    type:     annotation
-    prefix:   /
+main_page:
+    path:     /
+    defaults: { _controller: "CraigslistMainBundle:Default:index" }
+
+main_page_category:
+    path:     /category/{category}
+    defaults: { _controller: "CraigslistMainBundle:Default:sort" }
+
+add_advertisement:
+    path:     /advertisement/
+    defaults: { _controller: "CraigslistMainBundle:Advertisement:post" }
+
+my_advertisement:
+    path:     /myAds/
+    defaults: { _controller: "CraigslistMainBundle:MyAdvertisement:index" }
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"

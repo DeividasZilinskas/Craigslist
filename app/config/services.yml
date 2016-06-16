@@ -4,6 +4,10 @@ parameters:
 #    parameter_name: value
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    advertisement_manager:
+        class: Craigslist\MainBundle\Utility\AdvertisementManager
+        arguments: ["@doctrine"]
+
+    category_manager:
+            class: Craigslist\MainBundle\Utility\CategoryManager
+            arguments: ["@doctrine"]

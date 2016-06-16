@@ -1,0 +1,15 @@
+<h1 class="page-header">
+    {% if title is defined %}
+        {{ title }}
+    {% else %}
+        Craigslist
+    {% endif %}
+    {% if totalArtciles is defined %}
+        ({{ totalArtciles }})
+    {% endif %}
+    <small>
+        {% if description is defined %}
+            {{ description }}
+        {% endif %}
+    </small>
+</h1>

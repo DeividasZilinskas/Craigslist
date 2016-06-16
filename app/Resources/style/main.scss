@@ -1,1 +1,10 @@
 @import "./bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "base/variables";
+@import "utils/layout";
+
+.container:after {
+  content: none;
+}
+.container:before {
+  content: none;
+}
