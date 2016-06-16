@@ -29,11 +29,6 @@ class Category
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity="Advertisement", mappedBy="category")
-     */
-    private $advertisements;
-
-    /**
      * Get id
      *
      * @return int
@@ -66,5 +61,12 @@ class Category
     {
         return $this->name;
     }
-}
 
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->name;
+    }
+}

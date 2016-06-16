@@ -43,7 +43,7 @@ class Advertisement
     private $posted;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="advertisements")
+     * @ORM\ManyToOne(targetEntity="Category")
      * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
      */
     private $category;
@@ -135,5 +135,36 @@ class Advertisement
     {
         return $this->posted;
     }
-}
 
+    /**
+     * @return mixed
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param mixed $category
+     */
+    public function setCategory($category)
+    {
+        $this->category = $category;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPostedBy()
+    {
+        return $this->postedBy;
+    }
+
+    /**
+     * @param mixed $postedBy
+     */
+    public function setPostedBy($postedBy)
+    {
+        $this->postedBy = $postedBy;
+    }
+}
