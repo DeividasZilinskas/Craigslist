@@ -4,7 +4,7 @@
 
 {% block content %}
     {{ parent() }}
-    {% include '::inc/pageHeader.html.twig' with {'title': 'Craigslist', 'description': 'All advertisements',
+    {% include '::inc/pageHeader.html.twig' with {'title': 'Craigslist', 'description': '',
     'totalArtciles': ads|length } %}
     {% include '::inc/categoryList.html.twig' with {'categories': categories } %}
     {% include '::inc/adsList.html.twig' with {'ads': ads, 'myList': 0 } %}

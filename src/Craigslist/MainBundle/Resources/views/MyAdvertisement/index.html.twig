@@ -1,10 +1,10 @@
 {% extends "::base.html.twig" %}
 
-{% block title %}Craigslist - view your advertisement!{% endblock %}
+{% block title %}Craigslist - view {{ user.username | default("your") }} advertisements!{% endblock %}
 
 {% block content %}
 {{ parent() }}
-    {% include '::inc/pageHeader.html.twig' with {'title': 'Craigslist', 'description': 'Your advertisements',
+    {% include '::inc/pageHeader.html.twig' with {'title': 'Craigslist', 'description': user.username | default("your") ~ ' advertiments',
     'totalArtciles': myAds|length} %}
     {% include '::inc/adsList.html.twig' with {'ads': myAds, 'myList': 1 } %}
 {% endblock %}

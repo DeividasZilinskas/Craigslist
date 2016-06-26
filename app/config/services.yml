@@ -9,5 +9,9 @@ services:
         arguments: ["@doctrine"]
 
     category_manager:
-            class: Craigslist\MainBundle\Utility\CategoryManager
-            arguments: ["@doctrine"]
+        class: Craigslist\MainBundle\Utility\CategoryManager
+        arguments: ["@doctrine"]
+
+    user_manager:
+        class: Craigslist\MainBundle\Utility\UserManager
+        arguments: ["@doctrine"]

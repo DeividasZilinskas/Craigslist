@@ -1,16 +1,16 @@
 {% for ad in ads %}
+    <hr>
     <h2>
         <a href="#">{{ ad.title }}</a>
     </h2>
     {% if myList == 0 %}
         <p class="lead">
-            by <a href="index.php">{{ ad.postedBy.username }}</a>
+            by <a href="/user/{{ ad.postedBy.id }}">{{ ad.postedBy.username }}</a>
         </p>
     {% endif %}
-    <p><span class="glyphicon glyphicon-time"></span> Posted: {{ ad.posted.date }}</p>
-    <p><span class="glyphicon glyphicon-paperclip"></span> Category: {{ ad.category }}</p>
+    <p><span class="glyphicon glyphicon-time"></span> Posted: {{ ad.posted.date|date("Y F d (G:i:s)") }}</p>
+    <p><span class="glyphicon glyphicon-paperclip"></span> Category:
+        <a href="/category/{{ ad.category.id }}">{{ ad.category }}</a></p>
     <hr>
     <p>{{ ad.description }}</p>
-
-    <hr>
 {% endfor %}

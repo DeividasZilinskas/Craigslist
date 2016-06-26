@@ -43,4 +43,24 @@ class AdvertisementController extends Controller
             'form' => $form->createView(),
         ]);
     }
+
+    /**
+     * @param int $userId
+     * @return Response
+     */
+    public function userAdsAction(int $userId)
+    {
+        $userManager = $this->get('user_manager');
+        $user = $userManager->getUserById($userId);
+        if (!is_object($user) || !$user instanceof UserInterface) {
+            return $this->redirectToRoute('main_page');
+        }
+        $adManager = $this->get('advertisement_manager');
+        $ads = $adManager->fetchAdvertisementsByUser($user);
+
+        return $this->render('CraigslistMainBundle:MyAdvertisement:index.html.twig', [
+            'myAds' => $ads,
+            'user' => $user,
+        ]);
+    }
 }

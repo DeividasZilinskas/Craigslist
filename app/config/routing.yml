@@ -10,6 +10,10 @@ add_advertisement:
     path:     /advertisement/
     defaults: { _controller: "CraigslistMainBundle:Advertisement:post" }
 
+user_advertisements:
+    path:     /user/{userId}
+    defaults: { _controller: "CraigslistMainBundle:Advertisement:userAds" }
+
 my_advertisement:
     path:     /myAds/
     defaults: { _controller: "CraigslistMainBundle:MyAdvertisement:index" }
