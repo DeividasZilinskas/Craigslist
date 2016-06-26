@@ -22,7 +22,6 @@ class MyAdvertisementController extends Controller
         }
         $adManager = $this->get('advertisement_manager');
         $myAds = $adManager->fetchAdvertisementsByUser($user);
-        dump($myAds);
 
         return $this->render('CraigslistMainBundle:MyAdvertisement:index.html.twig', [
             'myAds' => $myAds,
